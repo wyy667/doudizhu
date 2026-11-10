@@ -1,0 +1,35 @@
+name: landlord
+description: "经典斗地主：单机模式的AI使用 DouZero 的本地 onnx 模型，难度不小；也可好友联机一起玩。"
+publish_to: 'none'
+version: 0.1.0-beta.1+260808
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.5.5
+  onnxruntime_v2: ^1.23.2
+  supabase_flutter: ^2.17.1
+  livekit_client: ^2.10.0
+  permission_handler: ^13.0.0
+  audioplayers: ^6.8.1
+  # 2026-08-07 有兼容问题，不是当前最新
+  package_info_plus: ^8.3.1
+  # 使用riverpod 2.x 的最新版本
+  flutter_riverpod: ^2.6.1
+  flutter_tts: ^4.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/douzero_wp/landlord.onnx
+    - assets/models/douzero_wp/landlord_up.onnx
+    - assets/models/douzero_wp/landlord_down.onnx
